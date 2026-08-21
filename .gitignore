@@ -1,0 +1,15 @@
+.env
+.venv/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+
+# Local configuration and generated runtime state
+config.yaml
+state/
+results/
+
+# Downloaded and generated datasets
+data/ait_ads/
+data/labels/
+data/labeled/
