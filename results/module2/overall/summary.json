@@ -1,0 +1,102 @@
+{
+  "completed_at": "2026-08-18T00:15:10.281693+00:00",
+  "failure_count": 0,
+  "scenarios": {
+    "fox": {
+      "attack_member_recall": 0.9999904742399635,
+      "candidate_objects": 1270,
+      "input_module1_objects": 11147,
+      "module1_and_2_object_reduction_from_raw": 0.9972559170638745,
+      "module2_reduction_rate": 0.8860680003588409,
+      "nonattack_member_suppression_rate": 0.9334498834498834,
+      "raw_test_alerts": 462814,
+      "status": "completed"
+    },
+    "harrison": {
+      "attack_member_recall": 1.0,
+      "candidate_objects": 15536,
+      "input_module1_objects": 54115,
+      "module1_and_2_object_reduction_from_raw": 0.9723291365144615,
+      "module2_reduction_rate": 0.712907696572115,
+      "nonattack_member_suppression_rate": 0.5958329960184578,
+      "raw_test_alerts": 561457,
+      "status": "completed"
+    },
+    "russellmitchell": {
+      "attack_member_recall": 1.0,
+      "candidate_objects": 817,
+      "input_module1_objects": 8492,
+      "module1_and_2_object_reduction_from_raw": 0.9789644429568217,
+      "module2_reduction_rate": 0.9037918040508715,
+      "nonattack_member_suppression_rate": 0.9152469423621822,
+      "raw_test_alerts": 38839,
+      "status": "completed"
+    },
+    "santos": {
+      "attack_member_recall": 1.0,
+      "candidate_objects": 11446,
+      "input_module1_objects": 32759,
+      "module1_and_2_object_reduction_from_raw": 0.8932515108557786,
+      "module2_reduction_rate": 0.6505998351598035,
+      "nonattack_member_suppression_rate": 0.6791138779291893,
+      "raw_test_alerts": 107224,
+      "status": "completed"
+    },
+    "shaw": {
+      "attack_member_recall": 1.0,
+      "candidate_objects": 1548,
+      "input_module1_objects": 16640,
+      "module1_and_2_object_reduction_from_raw": 0.9733163256511471,
+      "module2_reduction_rate": 0.9069711538461539,
+      "nonattack_member_suppression_rate": 0.938038959039113,
+      "raw_test_alerts": 58013,
+      "status": "completed"
+    },
+    "wardbeck": {
+      "attack_member_recall": 0.9998359849106118,
+      "candidate_objects": 2568,
+      "input_module1_objects": 23365,
+      "module1_and_2_object_reduction_from_raw": 0.9654903647163168,
+      "module2_reduction_rate": 0.8900920179756046,
+      "nonattack_member_suppression_rate": 0.9219228010597655,
+      "raw_test_alerts": 74414,
+      "status": "completed"
+    },
+    "wheeler": {
+      "attack_member_recall": 1.0,
+      "candidate_objects": 4584,
+      "input_module1_objects": 52690,
+      "module1_and_2_object_reduction_from_raw": 0.9920883126566287,
+      "module2_reduction_rate": 0.9130005693680016,
+      "nonattack_member_suppression_rate": 0.9118631086746211,
+      "raw_test_alerts": 579396,
+      "status": "completed"
+    },
+    "wilson": {
+      "attack_member_recall": 1.0,
+      "candidate_objects": 4586,
+      "input_module1_objects": 51431,
+      "module1_and_2_object_reduction_from_raw": 0.9922978608341353,
+      "module2_reduction_rate": 0.9108319884894325,
+      "nonattack_member_suppression_rate": 0.9284460872162486,
+      "raw_test_alerts": 595419,
+      "status": "completed"
+    }
+  },
+  "source": "results/module2/overall/summary.json",
+  "stage": "module2",
+  "totals": {
+    "attack_member_recall": 0.9999971347328827,
+    "attack_members": 1745038,
+    "candidate_objects": 42355,
+    "input_module1_objects": 250639,
+    "module1_and_2_object_reduction_from_raw": 0.9829046616531643,
+    "module2_reduction_rate": 0.8310119334979792,
+    "nonattack_member_suppression_rate": 0.8305480398286506,
+    "nonattack_members": 732538,
+    "raw_test_alerts": 2477576,
+    "retained_attack_members": 1745033,
+    "retained_nonattack_members": 124130
+  },
+  "version": 1
+}

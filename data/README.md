@@ -56,6 +56,7 @@ Arrange the downloaded and generated files as follows:
 SOCrates/
 ├── data/
 │   ├── README.md
+│   ├── ait_ads_labeling.py         # per-alert label alignment utility
 │   ├── ait_ads/                    # downloaded AIT-ADS files
 │   │   ├── ait_ads.zip             # optional after successful extraction
 │   │   ├── labels.csv
@@ -144,11 +145,12 @@ find data/ait_ads -maxdepth 1 -type f \
 ## Generate the labeled evaluation files
 
 The published AIT-ADS JSON files do not contain the per-alert `label` field
-required by the SOCRates experiment runner. From the repository root, merge the
-official labels into a separate output directory:
+required by the SOCRates experiment runner. This repository includes the
+complete alignment utility at `data/ait_ads_labeling.py`. From the repository
+root, use it to merge the official labels into a separate output directory:
 
 ```bash
-python -m src.data.ait_ads_labeling \
+python data/ait_ads_labeling.py \
   --input-dir data/ait_ads \
   --label-archive data/labels/alerts_csv.zip \
   --output-dir data/labeled \
@@ -162,6 +164,12 @@ The command validates row alignment before writing final files. It assigns:
 - `false_positive` to alerts inside an attack window without an event match;
 - the concrete event name, such as `dns_scan` or `webshell_cmd`, to matched
   attack alerts.
+
+For every scenario, the utility processes the Wazuh/Suricata file first and the
+AMiner file second, matching the ordering in the official archive. It verifies
+the label header, detector name, asset IP, and total row count before replacing
+the temporary outputs. Existing labeled files are preserved unless
+`--overwrite` is specified.
 
 The raw files under `data/ait_ads/` remain unchanged. Configure SOCRates to read
 the generated files under `data/labeled/`, for example:

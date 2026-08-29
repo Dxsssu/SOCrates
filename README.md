@@ -35,6 +35,14 @@ src/
 
 The three modules are connected by `pipeline.py`. Module 1 aggregates high-frequency behavior and filters confirmed benign patterns. Module 2 assigns graph-based anomaly scores to the remaining alerts. Module 3 combines false-positive knowledge with bidirectional behavioral context to produce the final verdict.
 
+## Results
+
+Portable summaries of the final eight-scenario AIT-ADS evaluation are organized
+under [`results/`](results/README.md). They are divided into overall, Module 1,
+Module 2, and Module 3 results; every module provides both aggregate metrics and
+per-scenario summaries. Large runtime databases, checkpoints, and per-alert
+intermediate files are intentionally excluded.
+
 ## How to Run
 
 ### 1. Install dependencies
@@ -51,7 +59,7 @@ python -m pip install 'PyYAML>=6.0' 'numpy>=1.24' 'requests>=2.28'
 
 ### 2. Prepare the AIT-ADS data
 
-Follow [`data/README.md`](data/README.md) to download AIT-ADS and the official per-alert labels, then generate the evaluation files containing the required `label` field. The recommended locations are:
+Follow [`data/README.md`](data/README.md) to download AIT-ADS and the official per-alert labels, then use the bundled [`data/ait_ads_labeling.py`](data/ait_ads_labeling.py) utility to generate the evaluation files containing the required `label` field. The recommended locations are:
 
 ```text
 data/labeled/fox_wazuh.json

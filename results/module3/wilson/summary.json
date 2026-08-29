@@ -1,0 +1,73 @@
+{
+  "candidate_objects": 4586,
+  "decided_accuracy": 0.9956389010030527,
+  "generated_at": "2026-08-18T11:32:20.498980+00:00",
+  "knowledge_hit_objects": 3327,
+  "knowledge_hits_by_outcome": {
+    "FN": 0,
+    "FP": 17,
+    "TN": 3308,
+    "TP": 2,
+    "needs_review_attack": 0,
+    "needs_review_nonattack": 0
+  },
+  "knowledge_retrieval": {
+    "payload_similarity_threshold": 0.7,
+    "semantic_alias_groups": [],
+    "semantic_gate": "exact_or_explicit_alias_group",
+    "top_k": 5
+  },
+  "member_level_after_module3": {
+    "attack_member_recall": 0.9999930989268832,
+    "attack_members": 434715,
+    "nonattack_member_suppression_rate": 0.9967144563918757,
+    "nonattack_members": 160704,
+    "retained_attack_members": 434712,
+    "retained_nonattack_members": 528
+  },
+  "models": {
+    "embedding": "qwen3-embedding:0.6b",
+    "knowledge_patterns": 250,
+    "llm": "DeepSeek-V4-Flash"
+  },
+  "module12_run_signature": "497dbdb3a1f9642c0062a6e6f1882b905cf43118d66a64068d7b1d20b2e6d391",
+  "object_confusion": {
+    "FN": 3,
+    "FP": 17,
+    "TN": 4529,
+    "TP": 37,
+    "needs_review_attack": 0,
+    "needs_review_nonattack": 0
+  },
+  "object_metrics": {
+    "attack_object_retention_with_review": 0.925,
+    "decided_accuracy": 0.9956389010030527,
+    "decided_attack_f1": 0.7872340425531915,
+    "decided_attack_precision": 0.6851851851851852,
+    "decided_attack_recall": 0.925,
+    "decided_false_positive_recall": 0.9962604487461505,
+    "decided_objects": 4586,
+    "decision_coverage": 1.0,
+    "needs_review_excluded_from_binary_metrics": true,
+    "nonattack_object_suppression_including_review": 0.9962604487461505,
+    "review_objects": 0
+  },
+  "predicted_labels": {
+    "false_positive": 4532,
+    "needs_review": 0,
+    "true_alert": 54
+  },
+  "scenario": "wilson",
+  "source": "results/module3/wilson/summary.json",
+  "stage": "module3",
+  "version": 2,
+  "workload_reduction": {
+    "actionable_or_review_objects": 54,
+    "end_to_end_object_reduction_rate": 0.9999093075632454,
+    "module2_candidate_objects": 4586,
+    "module3_object_reduction_rate": 0.9882250327082425,
+    "module3_suppressed_as_false_positive_objects": 4532,
+    "needs_review_is_retained": true,
+    "raw_test_alerts": 595419
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "candidate_composition": {
+    "actual_attack_objects": 45,
+    "actual_nonattack_objects": 772,
+    "meta_alert_objects": 328,
+    "ordinary_alert_objects": 489,
+    "represented_raw_members": 13321
+  },
+  "configuration": {
+    "candidate_threshold": 0.7,
+    "frequency_window_seconds": 86400
+  },
+  "generated_at": "2026-08-18T00:00:11.387938+00:00",
+  "member_level_quality": {
+    "attack_member_recall": 1.0,
+    "attack_members": 10958,
+    "by_source_label": {
+      "attacker_change_user": {
+        "retained": 9,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 9
+      },
+      "benign": {
+        "retained": 2070,
+        "suppressed": 24754,
+        "suppression_rate": 0.9228303012227855,
+        "total": 26824
+      },
+      "crack_passwords": {
+        "retained": 2,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 2
+      },
+      "dirb": {
+        "retained": 4522,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 4522
+      },
+      "dnsteal": {
+        "retained": 2,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 2
+      },
+      "escalated_sudo_command": {
+        "retained": 15,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 15
+      },
+      "false_positive": {
+        "retained": 293,
+        "suppressed": 764,
+        "suppression_rate": 0.7228003784295175,
+        "total": 1057
+      },
+      "service_scan": {
+        "retained": 50,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 50
+      },
+      "webshell_cmd": {
+        "retained": 3,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 3
+      },
+      "wpscan": {
+        "retained": 6355,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 6355
+      }
+    },
+    "eligible_members": 38839,
+    "nonattack_member_suppression_rate": 0.9152469423621822,
+    "nonattack_members": 27881,
+    "retained_attack_members": 10958,
+    "retained_members": 13321,
+    "retained_nonattack_members": 2363,
+    "suppressed_members": 25518
+  },
+  "run_signature": "bc6b1bdbf9c0d631042d11f60fd02cc67c7ad9f38a60c9f8293ac66dbe872591",
+  "scenario": "russellmitchell",
+  "source": "results/module2/russellmitchell/summary.json",
+  "stage": "module2",
+  "truth_boundary": "labels are evaluator-only and are absent from aggregation, HAT paths, graph features, scores, and the reusable module-three artifact",
+  "version": 1,
+  "workload_reduction": {
+    "candidate_objects": 817,
+    "input_module1_objects": 8492,
+    "module1_and_2_object_reduction_from_raw": 0.9789644429568217,
+    "module2_reduction_rate": 0.9037918040508715,
+    "raw_test_alerts": 38839
+  }
+}

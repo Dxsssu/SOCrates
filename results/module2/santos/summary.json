@@ -1,0 +1,106 @@
+{
+  "candidate_composition": {
+    "actual_attack_objects": 62,
+    "actual_nonattack_objects": 11384,
+    "meta_alert_objects": 1999,
+    "ordinary_alert_objects": 9447,
+    "represented_raw_members": 41989
+  },
+  "configuration": {
+    "candidate_threshold": 0.7,
+    "frequency_window_seconds": 86400
+  },
+  "generated_at": "2026-08-18T00:01:56.074636+00:00",
+  "member_level_quality": {
+    "attack_member_recall": 1.0,
+    "attack_members": 11165,
+    "by_source_label": {
+      "attacker_change_user": {
+        "retained": 17,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 17
+      },
+      "benign": {
+        "retained": 30499,
+        "suppressed": 63721,
+        "suppression_rate": 0.6763001485884101,
+        "total": 94220
+      },
+      "crack_passwords": {
+        "retained": 2,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 2
+      },
+      "dirb": {
+        "retained": 4522,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 4522
+      },
+      "dnsteal": {
+        "retained": 2,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 2
+      },
+      "escalated_sudo_command": {
+        "retained": 28,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 28
+      },
+      "false_positive": {
+        "retained": 325,
+        "suppressed": 1514,
+        "suppression_rate": 0.8232735182164219,
+        "total": 1839
+      },
+      "online_cracking": {
+        "retained": 4,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 4
+      },
+      "service_scan": {
+        "retained": 29,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 29
+      },
+      "webshell_cmd": {
+        "retained": 4,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 4
+      },
+      "wpscan": {
+        "retained": 6557,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 6557
+      }
+    },
+    "eligible_members": 107224,
+    "nonattack_member_suppression_rate": 0.6791138779291893,
+    "nonattack_members": 96059,
+    "retained_attack_members": 11165,
+    "retained_members": 41989,
+    "retained_nonattack_members": 30824,
+    "suppressed_members": 65235
+  },
+  "run_signature": "a11561ae0b9a37041ed9e284d7355b5fa1883f263ef722185034c7288148bd11",
+  "scenario": "santos",
+  "source": "results/module2/santos/summary.json",
+  "stage": "module2",
+  "truth_boundary": "labels are evaluator-only and are absent from aggregation, HAT paths, graph features, scores, and the reusable module-three artifact",
+  "version": 1,
+  "workload_reduction": {
+    "candidate_objects": 11446,
+    "input_module1_objects": 32759,
+    "module1_and_2_object_reduction_from_raw": 0.8932515108557786,
+    "module2_reduction_rate": 0.6505998351598035,
+    "raw_test_alerts": 107224
+  }
+}

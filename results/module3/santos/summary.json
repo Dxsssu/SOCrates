@@ -1,0 +1,73 @@
+{
+  "candidate_objects": 11446,
+  "decided_accuracy": 0.9925738249170015,
+  "generated_at": "2026-08-18T11:32:20.498980+00:00",
+  "knowledge_hit_objects": 9514,
+  "knowledge_hits_by_outcome": {
+    "FN": 1,
+    "FP": 63,
+    "TN": 9436,
+    "TP": 14,
+    "needs_review_attack": 0,
+    "needs_review_nonattack": 0
+  },
+  "knowledge_retrieval": {
+    "payload_similarity_threshold": 0.7,
+    "semantic_alias_groups": [],
+    "semantic_gate": "exact_or_explicit_alias_group",
+    "top_k": 5
+  },
+  "member_level_after_module3": {
+    "attack_member_recall": 0.9993730407523511,
+    "attack_members": 11165,
+    "nonattack_member_suppression_rate": 0.9917238363922173,
+    "nonattack_members": 96059,
+    "retained_attack_members": 11158,
+    "retained_nonattack_members": 795
+  },
+  "models": {
+    "embedding": "qwen3-embedding:0.6b",
+    "knowledge_patterns": 141,
+    "llm": "DeepSeek-V4-Flash"
+  },
+  "module12_run_signature": "a11561ae0b9a37041ed9e284d7355b5fa1883f263ef722185034c7288148bd11",
+  "object_confusion": {
+    "FN": 7,
+    "FP": 78,
+    "TN": 11306,
+    "TP": 55,
+    "needs_review_attack": 0,
+    "needs_review_nonattack": 0
+  },
+  "object_metrics": {
+    "attack_object_retention_with_review": 0.8870967741935484,
+    "decided_accuracy": 0.9925738249170015,
+    "decided_attack_f1": 0.5641025641025641,
+    "decided_attack_precision": 0.41353383458646614,
+    "decided_attack_recall": 0.8870967741935484,
+    "decided_false_positive_recall": 0.9931482782853127,
+    "decided_objects": 11446,
+    "decision_coverage": 1.0,
+    "needs_review_excluded_from_binary_metrics": true,
+    "nonattack_object_suppression_including_review": 0.9931482782853127,
+    "review_objects": 0
+  },
+  "predicted_labels": {
+    "false_positive": 11313,
+    "needs_review": 0,
+    "true_alert": 133
+  },
+  "scenario": "santos",
+  "source": "results/module3/santos/summary.json",
+  "stage": "module3",
+  "version": 2,
+  "workload_reduction": {
+    "actionable_or_review_objects": 133,
+    "end_to_end_object_reduction_rate": 0.9987596060583451,
+    "module2_candidate_objects": 11446,
+    "module3_object_reduction_rate": 0.9883802201642495,
+    "module3_suppressed_as_false_positive_objects": 11313,
+    "needs_review_is_retained": true,
+    "raw_test_alerts": 107224
+  }
+}

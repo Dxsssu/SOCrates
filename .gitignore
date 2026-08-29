@@ -7,7 +7,14 @@ __pycache__/
 # Local configuration and generated runtime state
 config.yaml
 state/
-results/
+
+# Runtime outputs are ignored unless they are curated paper-result summaries.
+results/*
+!results/README.md
+!results/overall/
+!results/module1/
+!results/module2/
+!results/module3/
 
 # Downloaded and generated datasets
 data/ait_ads/

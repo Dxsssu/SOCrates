@@ -1,0 +1,112 @@
+{
+  "configuration": {
+    "hat_initialization_fraction": 0.2
+  },
+  "generated_at": "2026-08-18T00:15:06.871882+00:00",
+  "member_level_quality": {
+    "attack_member_recall": 1.0,
+    "attack_members": 434715,
+    "by_source_label": {
+      "attacker_change_user": {
+        "retained": 11,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 11
+      },
+      "benign": {
+        "retained": 56822,
+        "suppressed": 98489,
+        "suppression_rate": 0.6341405309347052,
+        "total": 155311
+      },
+      "crack_passwords": {
+        "retained": 1,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 1
+      },
+      "dirb": {
+        "retained": 428239,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 428239
+      },
+      "dnsteal": {
+        "retained": 2,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 2
+      },
+      "escalated_sudo_command": {
+        "retained": 8,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 8
+      },
+      "false_positive": {
+        "retained": 2356,
+        "suppressed": 3037,
+        "suppression_rate": 0.563137400333766,
+        "total": 5393
+      },
+      "service_scan": {
+        "retained": 50,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 50
+      },
+      "webshell_cmd": {
+        "retained": 3,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 3
+      },
+      "wpscan": {
+        "retained": 6401,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "total": 6401
+      }
+    },
+    "eligible_members": 595419,
+    "nonattack_member_suppression_rate": 0.6317577658303465,
+    "nonattack_members": 160704,
+    "retained_attack_members": 434715,
+    "retained_members": 493893,
+    "retained_nonattack_members": 59178,
+    "suppressed_members": 101526
+  },
+  "run_signature": "497dbdb3a1f9642c0062a6e6f1882b905cf43118d66a64068d7b1d20b2e6d391",
+  "scenario": "wilson",
+  "source": "results/module1/wilson/summary.json",
+  "split": {
+    "hat_fit_benign_members": 38827,
+    "test_labels": {
+      "attacker_change_user": 11,
+      "benign": 155311,
+      "crack_passwords": 1,
+      "dirb": 428239,
+      "dnsteal": 2,
+      "escalated_sudo_command": 8,
+      "false_positive": 5393,
+      "service_scan": 50,
+      "webshell_cmd": 3,
+      "wpscan": 6401
+    },
+    "test_raw_members": 595419,
+    "total_records": 634246
+  },
+  "stage": "module1",
+  "state": {
+    "hat_status": "created"
+  },
+  "truth_boundary": "labels are evaluator-only and are absent from aggregation, HAT paths, graph features, scores, and the reusable module-three artifact",
+  "version": 1,
+  "workload_reduction": {
+    "after_aggregation_objects": 114498,
+    "after_hat_objects": 51431,
+    "aggregation_reduction_rate": 0.8077018032679508,
+    "raw_test_alerts": 595419,
+    "total_reduction_rate": 0.9136221719495011
+  }
+}
