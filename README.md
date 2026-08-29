@@ -12,28 +12,51 @@ We evaluate SOCrates primarily on the public AIT-ADS benchmark. On 2,477,576 tes
 
 ## Code Structure
 
-The core system implementation is located in `src/`. This repository treats `src` itself as the Python package, so all commands below must be executed from the repository root.
+The repository contains the paper, data-preparation utilities, curated evaluation
+results, and the complete system implementation. The `src/` directory itself is
+the Python package, so all commands below must be executed from the repository
+root.
 
 ```text
-src/
-├── __main__.py                        # Command-line entry point
-├── config.py                          # Configuration definitions and validation
-├── factory.py                         # Default component assembly
-├── models.py                          # Alert, Meta-Alert, graph, and verdict models
-├── pipeline.py                        # Three-stage pipeline orchestration
-├── runner.py                          # AIT-ADS experiment runner
-├── serialization.py                  # JSON/JSONL result serialization
+SOCrates/
+├── README.md                          # Project overview and usage instructions
+├── AI_Powered_SOC_Agents_...pdf       # Paper manuscript
 ├── data/
-│   ├── ait_ads.py                     # AIT-ADS ingestion and normalization
-│   ├── ait_ads_labeling.py            # Official per-alert label alignment
-│   └── tianyan.py                     # Tianyan alert ingestion and normalization
-└── modules/
-    ├── benign_fingerprint/            # Module 1: aggregation and HAT filtering
-    ├── graph_prioritization/          # Module 2: AEG construction and prioritization
-    └── llm_investigation/             # Module 3: RAG, graph context, and LLM adjudication
+│   ├── README.md                      # AIT-ADS download and preparation guide
+│   ├── ait_ads_labeling.py            # Standalone per-alert label alignment utility
+│   ├── ait_ads/                       # Downloaded raw AIT-ADS data (Git-ignored)
+│   └── labeled/                       # Generated labeled inputs (Git-ignored)
+├── results/
+│   ├── README.md                      # Result organization and scope
+│   ├── overall/                       # Combined headline metrics
+│   ├── module1/                       # Aggregate and per-scenario Module 1 results
+│   ├── module2/                       # Aggregate and per-scenario Module 2 results
+│   └── module3/                       # Aggregate and per-scenario Module 3 results
+└── src/
+    ├── __main__.py                    # Command-line entry point
+    ├── config.py                      # Configuration definitions and validation
+    ├── factory.py                     # Default component assembly
+    ├── models.py                      # Alert, Meta-Alert, graph, and verdict models
+    ├── pipeline.py                    # Three-stage pipeline orchestration
+    ├── progress.py                    # Runtime progress reporting
+    ├── runner.py                      # AIT-ADS experiment runner
+    ├── serialization.py              # JSON/JSONL result serialization
+    ├── data/
+    │   ├── ait_ads.py                 # AIT-ADS ingestion and normalization
+    │   ├── ait_ads_labeling.py        # Importable label-alignment implementation
+    │   └── tianyan.py                 # Tianyan ingestion and normalization
+    └── modules/
+        ├── benign_fingerprint/        # Module 1: aggregation and HAT filtering
+        ├── graph_prioritization/      # Module 2: AEG construction and prioritization
+        └── llm_investigation/         # Module 3: retrieval, context, and LLM adjudication
 ```
 
-The three modules are connected by `pipeline.py`. Module 1 aggregates high-frequency behavior and filters confirmed benign patterns. Module 2 assigns graph-based anomaly scores to the remaining alerts. Module 3 combines false-positive knowledge with bidirectional behavioral context to produce the final verdict.
+The three modules are connected by `src/pipeline.py`. Module 1 aggregates
+high-frequency behavior and filters confirmed benign patterns. Module 2 assigns
+graph-based anomaly scores to the remaining alerts. Module 3 combines
+false-positive knowledge with bidirectional behavioral context to produce the
+final verdict. Runtime state such as SQLite databases is written under `state/`
+by the example configuration and is excluded from Git.
 
 ## Results
 
